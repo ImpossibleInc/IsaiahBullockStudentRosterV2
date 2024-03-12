@@ -4,7 +4,7 @@
 
 using std::string;
 
-Student::Student(string iStudentID, string iFName, string iLName, string iEmail,  int iAge, int daysToCom1, int daysToCom2, int daysToCom3, DegreeProgram iDegree) {
+Student::Student(string iStudentID, string iFName, string iLName, string iEmail, int iAge, int daysToCom1, int daysToCom2, int daysToCom3, DegreeProgram iDegree) {
 	setID(iStudentID);
 	setFName(iFName);
 	setLName(iLName);
@@ -56,6 +56,9 @@ int Student::getAge() {
 int Student::getDay1() {
 		return numDaysToCom[0];
 	}
+int Student::getDay2() {
+	return numDaysToCom[1];
+}
 int Student::getDay3() {
 		return numDaysToCom[2];
 	}
@@ -64,8 +67,8 @@ double Student::getAvgDays() {
 		for (int i = 0; i < 3; i++) {
 			avg = avg + numDaysToCom[i];
 		}
-		return avg;
-		
+		std::cout << avg << " is the average amount of days in the three courses\n";
+		return avg;	
 	}
 DegreeProgram Student::getDegree() {
 		return degree;
@@ -91,19 +94,4 @@ void Student::print() {
 		default:
 			std::cout << "INVALID DEGREE\n";
 	}
-}
-
-void Student::test() {
-	std::cout << getID() << std::endl;
-	std::cout << getFName() << std::endl;
-	std::cout << getLName() << std::endl;
-	std::cout << getEmail() << std::endl;
-	std::cout << getAge() << std::endl;
-	std::cout << getAge() << std::endl;
-	std::cout << getDay1() << std::endl;
-	std::cout << getDay2() << std::endl;
-	std::cout << getDay3() << std::endl;
-	std::cout << getAvgDays() << std::endl;
-	std::cout << getDegree() << std::endl;
-	print();
 }

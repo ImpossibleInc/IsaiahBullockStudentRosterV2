@@ -10,7 +10,7 @@ class Student {
 	int numDaysToCom[3];
 	DegreeProgram degree;
 public:
-	Student(string iStudentID, string iFName, string iLName, string iEmail, int iAge, int daysToCom1, int daysToCom2, int daysToCom3, DegreeProgram iDegree);
+	Student(string iStudentID = "Blank", string iFName = "Blank", string iLName = "Blank", string iEmail = "Blank", int iAge = 0, int daysToCom1 = 0, int daysToCom2 = 0, int daysToCom3 = 0, DegreeProgram iDegree = SECURITY);
 	void setID(string iStudentID);
 	void setFName(string iFName);
 	void setLName(string iLName);
@@ -30,5 +30,4 @@ public:
 	DegreeProgram getDegree();
 	
 	void print();
-	void test();
 };
